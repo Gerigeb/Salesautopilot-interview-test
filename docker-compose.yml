@@ -1,0 +1,26 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/app
+      - /app/vendor
+    environment:
+      - APP_ENV=local
+      - APP_URL=http://localhost:8000
+    depends_on:
+      - vite
+
+  vite:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - vite_node_modules:/app/node_modules  # musl-compiled binaries, isolated from host
+    ports:
+      - "5173:5173"
+    command: sh -c "npm install && npm run dev -- --host"
+
+volumes:
+  vite_node_modules:
