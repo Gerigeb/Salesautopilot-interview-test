@@ -13,6 +13,7 @@ class ListController extends Controller
         private readonly ApiClient $client,
     ) {}
 
+    //I didn't find any endpoint that returns the lists' created date, so I didn't include it on the listing page.
     public function index(): View
     {
         try {

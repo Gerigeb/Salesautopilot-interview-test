@@ -4,9 +4,9 @@ A Laravel application for browsing email marketing lists and their subscribers v
 
 ## Project Structure
 
-| Path                | Description                          |
-|---------------------|--------------------------------------|
-| `app/`              | Backend logic (controllers, services)|
-| `resources/views/`  | Blade frontend templates             |
-| `docs/`             | AI chat log and project notes        |
-| `docs/plans/`       | Project setup plans                  |
+| Path                | Description                                  |
+|---------------------|----------------------------------------------|
+| `app/`              | Backend logic (controllers, services)        |
+| `resources/views/`  | Blade frontend templates                     |
+| `docs/`             | AI chat log, REFLECTION.md and project notes |
+| `docs/plans/`       | Project setup plans                          |
